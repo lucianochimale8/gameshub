@@ -12,19 +12,52 @@
         <p>Mi biblioteca de videojuegos</p>
     </header>
     <main> 
-        <section class="games"> 
-            <article class="game-card"> 
-                <h2>Minecraft</h2>
-                <p>Género: Sandbox</p> 
-                <p>Año: 2011</p> 
-            </article> 
-            <article class="game-card"> 
-                <h2>RedCup</h2> 
-                <p>Género: Action</p> 
-                <p>Año: 2026</p> 
-            </article> 
-        </section> 
+        <section class="toolbar"> 
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Buscar un videojuego..."
+            >
+        </section>
+
+        <section class="form-section">
+            <h2>Agregar videojuego</h2>
+
+            <form id="gameForm">
+                <input
+                    type="text"
+                    id="gameName"
+                    placeholder="Nombre del videojuego"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="gameGenre"
+                    placeholder="Género"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="gameYear"
+                    placeholder="Año"
+                    min="1950"
+                    max="2100"
+                    required
+                >
+
+                <button type="submit">Agregar juego</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mi biblioteca</h2>
+            <div id="gamesList" class="games"></div>
+            <p id="emptyMessage" hidden>No se encontraron videojuegos.</p>
+        </section>
     </main>
+    
     <script src="script.js"></script>
 </body>
 </html>
